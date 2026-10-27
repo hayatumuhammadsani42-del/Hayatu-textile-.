@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HAYATU TEXTILES - Bauchi state central market</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:sans-serif;background:#FFFBF0}
+.header{background:#08382a;color:#f9d949;padding:30px 20px;text-align:center}
+.btn{background:#f9d949;color:#08382a;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:900;display:inline-block}
+.section{padding:20px;max-width:900px;margin:auto}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.item{background:white;border-radius:14px;padding:10px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.box{height:160px;background:#eee;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.order{ background:white;padding:22px;border-radius:18px;margin-top:25px;border:2px solid #08382a}
+.order input,.order select,.order textarea{width:100%;padding:12px;margin:7px 0;border-radius:10px;border:1.5px solid #ccc;font-size:15px}
+.order button{width:100%;padding:14px;background:#25D366;color:white;border:none;border-radius:12px;font-weight:900;font-size:17px}
+.footer{background:#08382a;color:white;text-align:center;padding:25px;margin-top:25px}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>HAYATU TEXTILES</h1>
+<p>Ingantacciyar Shadda & Atamfa | Bauchi, central market</p>
+<p style="color:white;font-size:14px;margin-top:5px">Email: Hayatumuhammadsani42@gmail.com | 0916 832 3438</p>
+<br><a href="#order" class="btn">PLACE ORDER NOW 7</a>
+</div>
+
+<div class="section">
+<h2 style="text-align:center;color:#08382a;margin-bottom:15px">Our 6 Collections</h2>
+<div class="grid">
+<div class="item"><div class="box"><img src="Images/IMG-20260510-WA0001.jpg" style="width:100%;height:160px;object-fit:cover;border-radius:10px"></div><h3>Silver Dust bullet proof</h3><p>$1</p></div>
+<div class="item"><div class="box"><img src="Images/file_0000000097d871f49d42f5cd600b334c.png" style="width:100%;height:160px;object-fit:cover;border-radius:10px"></div><h3>Dr. Hayatu</h3><p>$100</p></div>
+<div class="item"><div class="box"><img src="Images/InShot_20260403_194527998.jpg" style="width:100%;height:160px;object-fit:cover;border-radius:10px"></div><h3>Sheik Hayatu</h3><p>$1</p></div>
+<div class="item"><div class="box"><img src="Images/IMG-20260116-WA0060.jpg" style="width:100%;height:160px;object-fit:cover;border-radius:10px"></div><h3>Getzner Original</h3><p>$1</p></div>
+<div class="item"><div class="box"><img src="Images/IMG-20260111-WA0061.jpg" style="width:100%;height:160px;object-fit:cover;border-radius:10px"></div><h3>Lace Masarauta</h3><p>$1</p></div>
+<div class="item"><div class="box"><img src="Images/a411dc9299394ff38d81c650546307c2 (1).jpg" style="width:100%;height:160px;object-fit:cover;border-radius:10px"></div><h3>Shadda New Design</h3><p>$1</p></div>
+</div>
+
+<div id="order" class="order">
+<h2 style="text-align:center;color:#08382a"> PLACE YOUR ORDER HERE</h2>
+<p style="text-align:center;font-size:13px">Orders will come to 09168323438 / 09014453607 </p>
+<input id="n" placeholder="Your Name / Sunanka *">
+<input id="ph" placeholder="Your Phone Number *">
+<select id="p">
+<option>Choose Product</option>
+<option>PHOTO 1 - Shadda Royal Blue</option>
+<option>PHOTO 2 - Shadda White</option>
+<option>PHOTO 3 - Atamfa Girma</option>
+<option>PHOTO 4 - Getzner Original</option>
+<option>PHOTO 5 - Lace Masarauta</option>
+<option>PHOTO 6 - Shadda New Design</option>
+</select>
+<input id="q" type="number" placeholder="Quantity / Yawa ">
+<textarea id="a" placeholder="Delivery Address - Bauchi, central market etc"></textarea>
+<button onclick="orderNow()">ORDER NOW ON WHATSAPP</button>
+<p id="ok" style="text-align:center;color:green;margin-top:10px"></p>
+</div>
+</div>
+
+<div class="footer">
+<h3>HAYATU TEXTILES</h3>
+<p>Bauch, central market State, Nigeria</p>
+<p>Call/WhatsApp: 0916 832 3438 | 0901 445 3607</p>
+<p>Email: Hayatumuhammadsani42@gmail.com</p>
+<p style="margin-top:10px">© 2026 Hayatu Textiles - Trusted & Mai Aminci</p>
+</div>
+
+<script>
+function orderNow(){
+let name=document.getElementById('n').value;
+let cphone=document.getElementById('ph').value;
+let prod=document.getElementById('p').value;
+let qty=document.getElementById('q').value;
+let addr=document.getElementById('a').value;
+if(!name||!qty){alert("Please fill Name and Quantity");return;}
+let myNum="2349168323438";
+let text=`*NEW ORDER - HAYATU TEXTILES*%0A%0AName: ${name}%0ACustomer Phone: ${cphone}%0AProduct: ${prod}%0AQuantity: ${qty}%0AAddress: ${addr}%0A%0APlease confirm my order.`;
+window.open(`https://wa.me/${myNum}?text=${text}`,"_blank");
+document.getElementById('ok').innerText="Opening WhatsApp... You will receive this order!";
+}
+</script>
+</body>
+</html>
